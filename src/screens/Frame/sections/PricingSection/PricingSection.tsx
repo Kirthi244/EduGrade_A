@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../../../components/ui/button";
 
 export const PricingSection = (): JSX.Element => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative w-full bg-[linear-gradient(135deg,rgba(99,102,241,1)_0%,rgba(139,92,246,1)_100%)] py-20">
       <div className="container mx-auto px-6 max-w-[896px]">
@@ -16,7 +19,10 @@ export const PricingSection = (): JSX.Element => {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button className="h-14 px-8 bg-white text-indigo-500 hover:bg-white/90 rounded-xl [font-family:'Inter',Helvetica] font-normal text-base">
+            <Button
+              onClick={() => navigate('/signin')}
+              className="h-14 px-8 bg-white text-indigo-500 hover:bg-white/90 rounded-xl [font-family:'Inter',Helvetica] font-normal text-base"
+            >
               Start Free Trial
             </Button>
 
